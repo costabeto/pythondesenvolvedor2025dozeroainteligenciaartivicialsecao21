@@ -3,5 +3,14 @@
     Products
 {% endblock %}
 {% block content %}
-    <h2> Products List </h2>
-{% endblock %}
+    <section>
+        <h2> Products List </h2>
+        {% for product in products %}
+            <article>
+                <h3>{{product.name}}</h3>
+                <h3>R${{product.price}}</h3>
+                <h3>Estoque:{{product.stock}}</h3>
+            </article>
+        {% endfor %}
+        </section>
+ {% endblock %}
